@@ -24,6 +24,7 @@ public class MainController {
     public ModelAndView addTeamPage() {
         ModelAndView modelAndView = new ModelAndView("add-team-form");
         modelAndView.addObject("team", new Team());
+        System.out.println("hey i am done..!");
         return modelAndView;
     }
 	
