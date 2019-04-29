@@ -56,7 +56,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
         Properties properties = new Properties();
         properties.put(PROPERTY_NAME_HIBERNATE_DIALECT, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_DIALECT));
         properties.put(PROPERTY_NAME_HIBERNATE_SHOW_SQL, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_SHOW_SQL));
-      //  properties.put("hibernate.connection.driver-class", "com.mysql.jdbc.Driver");
+    
         return properties;  
     }
     

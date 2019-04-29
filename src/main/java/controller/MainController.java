@@ -28,7 +28,7 @@ public class MainController {
         return modelAndView;
     }
 	
-	@RequestMapping(value="/edit{id}",method=RequestMethod.GET)
+	@RequestMapping(value="/edit/{id}",method=RequestMethod.GET)
     public ModelAndView editTeamPage(@PathVariable int id) {
         ModelAndView modelAndView = new ModelAndView("edd-team-form");
         Team team = teamService.getTeam(id);
@@ -49,7 +49,7 @@ public class MainController {
         return modelAndView;
     }
 	
-	 /*@RequestMapping(value="/team/edit/{id}", method=RequestMethod.POST)
+	@RequestMapping(value="/edit{id}", method=RequestMethod.POST)
 	    public ModelAndView edditingTeam(@ModelAttribute Team team, @PathVariable Integer id) {
 	 
 	        ModelAndView modelAndView = new ModelAndView("home");
@@ -60,7 +60,7 @@ public class MainController {
 	        modelAndView.addObject("message", message);
 	 
 	        return modelAndView;
-	    }*/
+	    }
 	
 	@RequestMapping(value="/delete/{id}", method=RequestMethod.GET)
     public ModelAndView deleteTeam(@PathVariable int id) {
